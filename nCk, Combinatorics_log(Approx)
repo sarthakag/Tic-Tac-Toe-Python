@@ -1,0 +1,12 @@
+    long double bi(int n, int k)
+    {
+        long double res=1;
+        int x=n;
+        for(int i=1;i<=k;i++)
+        {
+            res+=log10(n--);
+            res-=log10(i);
+        }
+        res-=x*log10(2);
+        return res;
+    }
