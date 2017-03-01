@@ -1,0 +1,15 @@
+ull expo(ull base,ull x)
+{
+    ull res = 1;    
+    base = base % MOD; 
+    while (x > 0)
+    {
+        if (x & 1)
+            res = (res*base) % MOD;
+        x= x>>1;
+        base = (base*base) % MOD;  
+    }
+    return res;
+}
+			
+			
