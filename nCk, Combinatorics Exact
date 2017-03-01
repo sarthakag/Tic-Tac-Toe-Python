@@ -1,0 +1,11 @@
+   ull bi(int n, int k)
+    {
+        ull res=1;
+        ull x=n;
+        for(int i=1;i<=k;i++)
+        {
+            res*=n--;
+            res/=i;
+        }
+        return res;
+    }
