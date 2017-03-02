@@ -7,6 +7,10 @@ typedef unsigned long long ull;
 #define mp make_pair
 #define Vint vector<int>
 #define Vull vector<ull>
+#define tn ull n;cin>>n
+#define nl cout<<endl
+#define tnm ull n,m;cin>>n>>m
+#define MOD 1000000007
 
 int main() {
 	
