@@ -5,7 +5,7 @@ typedef long long ll;
 #define For(i,a,b) for(int i=a;i<b;i++)
 #define test() ull t;cin>>t;while(t--)
 #define pb push_back
-#define mp make_pair
+#define mkp make_pair
 #define Vint vector<int>
 #define Vull vector<ull>
 #define tn ull n;cin>>n
