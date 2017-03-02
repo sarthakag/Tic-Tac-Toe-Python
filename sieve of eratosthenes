@@ -1,7 +1,7 @@
 
 void sieve(ull n)
 {
-    for (ull i=2;i*i<=n;p++)
+    for (ull i=2;i*i<=n;i++)
     {
         if (prime[i]==true)
         {
