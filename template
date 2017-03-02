@@ -13,7 +13,8 @@ typedef long long ll;
 #define tnm ull n,m;cin>>n>>m
 #define MOD 1000000007
 
-int main() {
+int main() 
+{
 	
   
 	return 0;
