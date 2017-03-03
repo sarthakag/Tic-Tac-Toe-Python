@@ -3,10 +3,10 @@ void sieve(ull n)
 {
     for (ull i=2;i*i<=n;i++)
     {
-        if (prime[i]==true)
+        if (prime[i]==0)
         {
-            for (int j=i*2; j<=n; i += i)
-                prime[j] = false;
+            for (int j=i*2; j<=n; j += i)
+                prime[j] = 1;
         }
     }
 }
