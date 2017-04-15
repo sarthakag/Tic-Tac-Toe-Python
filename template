@@ -4,14 +4,19 @@ typedef unsigned long long ull;
 typedef long long ll;
 #define For(i,a,b) for(int i=a;i<b;i++)
 #define test() ull t;cin>>t;while(t--)
+#define puu pair<ull,ull>
+#define f first
+#define s second
 #define pb push_back
 #define mkp make_pair
+#define ins insert
 #define Vint vector<int>
 #define Vull vector<ull>
 #define tn ull n;cin>>n
 #define nl cout<<endl
 #define tnm ull n,m;cin>>n>>m
 #define MOD 1000000007
+
 
 int main() 
 {
