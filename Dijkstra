@@ -1,0 +1,59 @@
+# define INF ULLONG_MAX
+ull mn=INF;
+class Graph
+{
+    ull V;    
+     list< pair<ull, ull> > *adj;
+ 
+    public:
+    Graph(ull V);  
+    void addEdge(ull u, ull v, ull w);
+    void shortestPath(ull s,vector<ull>&dist,ull k);
+};
+
+Graph::Graph(ull V)
+{
+    this->V = V;
+    adj = new list< pair<ull, ull> >[V];
+}
+ 
+void Graph::addEdge(ull u, ull v, ull w)
+{
+    adj[u].push_back(make_pair(v, w));
+    adj[v].push_back(make_pair(u, w));
+}
+void Graph::shortestPath(ull src,vector<ull>&dist,ull k)
+{
+    
+    set< pair<ull, ull> > setds;
+    setds.insert(make_pair(dist[src], src));
+    while (!setds.empty())
+    {
+        pair<ull, ull> tmp = *(setds.begin());
+        setds.erase(setds.begin());
+        ull u = tmp.second;
+        list< pair<ull, ull> >::iterator i;
+        for (i = adj[u].begin(); i != adj[u].end(); ++i)
+        {
+            ull v = (*i).first;
+            ull weight = (*i).second;
+            
+            if (dist[v] > dist[u] + weight)
+            {
+                if (dist[v] != INF && setds.find(make_pair(dist[v], v))!=setds.end())
+                    setds.erase(setds.find(make_pair(dist[v], v)));
+                dist[v] = dist[u] + weight;
+                setds.insert(make_pair(dist[v], v));
+            }
+        }
+    }
+}
+int main()
+{
+  int V;
+  cin>>V;
+  vector<int>dist(V,INF);
+  Graph g(V);
+  g.add(a,b,x);
+  g.shortestpath(s,dist);
+}
